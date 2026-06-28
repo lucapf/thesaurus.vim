@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# scripts/thesaurus.sh — WordNet lookup for the nvim thesaurus plugin.
+#  WordNet lookup script for the nvim thesaurus plugin.
 # Called by the plugin as:  bash -c "scripts/thesaurus.sh <word>"
 #
 # For the given word it prints:
@@ -19,11 +19,11 @@ fi
 
 command -v wn >/dev/null 2>&1
 if [ $? -ne 0 ] ; then
-  echo "thesaurus: 'wn' (WordNet) not found."
+  echo "thesaurus: 'wn' (WordNet) not found. Install the "wordnet" package via"
   [[ "$OSTYPE"  = "linux-gnu" ]] \
-    &&  echo " install it with:  sudo apt-get install wordnet" \
-    ||  echo " install with brew install wordnet"
-  exit 0
+    &&  echo "sudo apt install wordnet" \
+    ||  echo "brew install wordnet"
+  exit 1
 fi
 
 # ── Meanings + synonyms ──────────────────────────────────────────────

@@ -53,8 +53,12 @@ function M.run()
 	vim.cmd("write") -- save first, so the script sees your latest edits
 
 	local result = vim.system({ M.config.script, selected_word }, { text = true }):wait()
-
 	local output = (result.stdout or "") .. (result.stderr or "")
+  if result.code ~= 0 then
+		vim.notify(output, vim.log.levels.ERROR)
+    return 
+  end  
+
 	show_output(vim.split(output, "\n", { trimempty = true }))
 end
 
