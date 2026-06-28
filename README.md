@@ -21,6 +21,7 @@ Copy the content below inside the `~/.config/nvim/lua/plugins/thesaurus.lua`
 ```
 return {
   "lucapf/thesaurus.vim",
+  version = "*",
   lazy = false,
   cmd = "Thesaurus",
   init = function()
@@ -32,3 +33,15 @@ return {
 }
 ```
 Restart `neovim`
+
+## Check Updates
+
+Inside neovim type: `:Lazy`. To open the **Update** section press `U`.
+
+## Uninstall
+
+* Remove the file  `~/.config/nvim/lua/plugins/thesaurus.lua`
+* from neovim type: `:Lazy` then `X`
+the system will remove the plugin.
+
+To uninstall `WordNet` use `sudo apt uninstall wordnet && sudo apt autoremove` or `brew uninstall`
