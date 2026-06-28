@@ -34,6 +34,8 @@ return {
 ```
 Restart `neovim`
 
+![installation](images/thesaurus.gif)
+
 ## Check Updates
 
 Inside neovim type: `:Lazy`. To open the **Update** section press `U`.
