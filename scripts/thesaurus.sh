@@ -51,3 +51,5 @@ collect_antonyms n no
 collect_antonyms v verb
 collect_antonyms a adjective
 collect_antonyms r adverb
+
+exit 0
